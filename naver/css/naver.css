@@ -149,6 +149,9 @@ body{
     margin: 3px;
     background-position: -348px -260px;
 }
+.ico-jr:hover{
+    background-position: -214px -308px;
+}
 
 .ico-happybin {
     display: inline-block;
@@ -156,6 +159,9 @@ body{
     height: 11px;
     margin: 3px 3px 2px;
     background-position: -253px -323px;
+}
+.ico-happybin:hover{
+    background-position: -214px -323px;
 }
 
 /*로고 관련 css */
