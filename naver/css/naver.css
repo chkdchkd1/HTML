@@ -317,7 +317,6 @@ body{
     top: 54px;
     left: 0;
     width: 586px;
-    display: none;
 }
 .auto-box{
     position: relative;
@@ -389,12 +388,15 @@ body{
 
 
 /*메뉴 관련 css */
-.box-container-menu{
+#box-container-menu{
     border-top:1px solid #ececec;
     height: 50px;
     /* border-bottom: 1px solid #ececec; */
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
+    position: relative;
 }
+
+/* 만약에 top bottom left right 다줬는데도 이상하면 대게 기준점이 없거나 (position : realtive의 부재) 기준점이 엉뚱한 클래스에 가 있어서 그렇다  */
 
 .group-menu {
     position: relative;
@@ -443,6 +445,18 @@ ol, ul {
     margin-left: 18px;
 }
 
+.list-nav.type-empty .nav-item+.nav-item {
+    margin-left: 8px;
+}
+
+.list-nav.type-empty .empty-box {
+    width: 68px;
+    height: 28px;
+    border: 1px solid #dae1e6;
+    border-radius: 2px;
+    background-color: #f7f9fa;
+}
+
 .ico-mail{
     display: inline-block;
     width: 21px;
@@ -481,6 +495,73 @@ ol, ul {
     vertical-align: 2px;
     background-position: -458px -432px;
 }
+.ly-open .btn-more{
+    color: #0ecd5a;
+}
+
+.ly-open .btn-more:after {
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    vertical-align: top;
+    vertical-align: 2px;
+    background-position: -458px -420px;
+}
+
+.ly-open .btn-ly-area{
+    display: block;
+}
+
+.btn-ly-area{
+    position: absolute;
+    z-index: 10;
+    top: 11px;
+    right: 0;
+    display: none;
+    width: 220px;
+    text-align: right;
+    background-color: #fff;
+}
+
+.btn-ly-area .btn{
+
+    display: inline-block;
+    margin-left: 3px;
+    padding: 7px 13px 5px;
+    border: 1px solid #dae1e6;
+    border-radius: 15px;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.btn-ly-area .btn-reset:before {
+    display: inline-block;
+    width: 10px;
+    height: 13px;
+    margin-right: 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -157px;
+}
+
+.btn-ly-area .btn-save {
+    color: #fff;
+    border-color: #00c73c;
+    background-color: #19ce60;
+}
+
+
+.btn-set:before {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -175px;
+}
+
 
 .groupkeyword {
     position: absolute;
@@ -549,19 +630,24 @@ ol, ul {
     text-overflow: ellipsis;
 }
 
+
 /*메뉴 더보기 관련 css */
+.ly-open .ly-service{
+    display: block;
+}
 .ly-service{
     position: absolute;
-    top: 52px;
+    top: 50px;
     right: 0;
     left: 0;
-    /* display: none; */
+    display: none;
     padding: 20px 30px 22px;
     border-top: 1px solid #e4e8eb;
     background-color: #fff;
     box-shadow: 0 4px 4px 0 rgba(0,0,0,.12);
-    z-index: 302;
+    z-index: 332;
 }
+
 
 .group-service {
     display: table;
@@ -581,11 +667,55 @@ ol, ul {
     padding: 0 18px 0 19px;
 }
 
+input[type=checkbox] {
+    display: none;
+}
+
+.ico-chk {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 4px 9px 0 0;
+    vertical-align: top;
+    background-position: -43px -404px;
+}
+
+.service-data.chk-check .ico-chk {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: top;
+    background-position: -22px -404px;
+}
+
+
 .list-service .service-title{
     font-weight: 700;
     margin-bottom: 3px;
     color: #000;
 }
+
+.list-service+.list-service {
+    border-left: 1px solid #e4e8eb;
+}
+
+.link-dic{
+    display: inline-block;
+    margin-top: 5px;
+    color: grey;
+}
+
+.link-dic::after {
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin-left: 7px;
+    content: '';
+    vertical-align: top;
+    vertical-align: 0;
+    background-position: -417px -116px;
+}
+
 
 
 /*메인창 관련 css */
@@ -619,9 +749,10 @@ ol, ul {
 }
 
 /*배경 이미지 클래스 */
-
-
-.btn-more:after,
+.btn-reset:before,
+.btn-set:before,
+.link-dic::after,
+.btn-more::after,
 .groupkeyword:after,
 .bg-44265f{
 
