@@ -81,7 +81,7 @@
     </div>
     <div id="box-container-menu">
         <div class="ly-service">
-            <div class="group-service fav-all-ly">
+            <div class="group-service fav-all-ly ">
                 <dl class="list-service">
                     <dt class="service-title">ㄱ-ㄷ</dt>
                       <dd class="service-data"><a href="https://www.grafolio.com/">그라폴리오</a></dd>
@@ -394,7 +394,7 @@
                 </ul>
                 <ul class="list-nav type-empty display-none">
                     <li class="nav-item">
-                        <div class="empty-box"></div>
+                        <div class="empty-box type-point"></div>
                     </li>
                     <li class="nav-item">
                         <div class="empty-box"></div>
@@ -430,8 +430,34 @@
     </div>
     <div class="box-container-main">
         <div class="container">
-            <div class="box-container-m-left"></div>
-            <div class="box-container-m-right"></div>
+            <div class="box-container-m-left">
+              <div class="da-board">
+                <div class="ad-content">
+                  <a href="#" class="ad-banner">
+                    <img src="https://ssl.pstatic.net/tveta/libs/1282/1282698/da63fd8ffd3da4c3a6e0_20200619161038981.jpg" width="1500" height="270" alt="[광고]진심을 다해 원작의 감성을 지키다 RAGNAROK ORIGIN 사전예약 중" border="0" style="width:750px;height:135px;">
+                  </a>
+                </div>
+              </div>
+              <div class="newscast">
+                <div class="newscast-header">
+                  <div class="issue-area">
+                    <a href="http://news.naver.com/main/list.nhn?mode=LPOD&mid=sec&sid1=001&sid2=140&oid=001&isYeonhapFlash=Y" class="link-media">연합뉴스</a>
+                    <div class="list-issue">
+                      <a href=""class="line-issue">재포장금지, 논란 속 내년 1월로 연기…유예기간 두기로(종합)</a>
+                    </div>
+                  </div>
+                  <div class="direct-area">
+                    <a href="#" class="link-news">네이버뉴스</a>
+                    <a href="#" class="link-direct">연예</a>
+                    <a href="#" class="link-direct">스포츠</a>
+                    <a href="#" class="link-direct">경제</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box-container-m-right">
+              <div class="container-right"></div>
+            </div>
         </div>
     </div>
     <div class="box-container-footer">
@@ -439,54 +465,7 @@
     </div>
 
     <script>
-        $(function(){
-            var open = true;
-            $('html').scrollTop(0);
-            $('.btn-container-whale').click(function(e){
-                //$(this).parents('.box-whale').remove();
-                $('.box-whale').addClass('display-none');
-                e.preventDefault();
-                //이벤트가 발생하면 주소창에 #뜨는걸 막아줌 
-            })
-
-            
-
-            $('.off').click(function(e){
-                $('.btn-autocomplete').click();
-                e.preventDefault();
-            })
-
-            $('.btn-autocomplete').click(function(){
-		    //자동 완성 기능이 활성화/비활성화
-		        $('.autowindow').toggleClass('display-none');
-		    //자동 완성 버튼 모양을 위로/아래로
-		        $('.ico-complete').toggleClass('active');
-            })
-            
-            $('.btn-more').click(function(){
-                $('#box-container-menu').toggleClass('ly-open');
-                if ( $('.btn-more').text() =='더보기'){
-                    $('.btn-more').text('접기');
-                }else{
-                    $('.btn-more').text('더보기');
-                }
-
-            })
-            
-            $('.service-data input').click(function(){
-                $(this).parents('dd').toggleClass('chk-check')
-            })
-            
-            $('.btn-set').click(function(){
-                $('.fav-edit-ly').toggleClass('display-none');
-                $('.fav-all-ly').toggleClass('display-none');
-                $('.fav-list').toggleClass('display-none');
-                $('.type-empty').toggleClass('display-none');
-                $('.btn-ly-area a').toggleClass('display-none');
-            })
-
-
-         })
+       
     </script>
 </body>
 </html>
