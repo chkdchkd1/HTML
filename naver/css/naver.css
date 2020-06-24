@@ -12,8 +12,15 @@ a{
 }
 body{
     min-width: 1190px;
-    font-family: "Malgun Gothic", "맑은 고딕";
 }
+
+body, button, input, select, table, textarea {
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(32, 32, 32);
+}
+
 .container{
     width: 1190px;
     margin: 0 auto;
@@ -797,6 +804,7 @@ input[type=checkbox] {
     width: 310px;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-top: 0px;
 }
 
 
@@ -849,6 +857,312 @@ input[type=checkbox] {
     text-decoration: none;
 }
 
+.newscast-title {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 22px 0 16px;
+}
+
+.newscast-title::after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.link-newsstand {
+    font-weight: 700;
+    float: left;
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+}
+
+.link-newsstand::before{
+    display: inline-block;
+    width: 27px;
+    height: 24px;
+    margin: -6px 1px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -293px -357px;
+}
+
+
+.link-newsstand::after{
+    display: inline-block;
+    width: 7px;
+    height: 11px;
+    margin-left: 6px;
+    content: '';
+    vertical-align: top;
+    vertical-align: -1px;
+    background-position: -417px -58px;
+}
+
+.tile-view{
+    
+    position: relative;
+    height: 260px;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #dae1e6;
+
+}
+
+.sort-area {
+    float: left;
+    margin-left: 10px;
+}
+
+.btn-sort {
+    font-size: 14px;
+    text-decoration: none;
+    color: #505050;
+}
+
+.btn-sort.sort-on {
+    font-weight: 700;
+    color: #000;
+}
+
+.btn-sort+.btn-sort:before {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin: 0 8px 0 4px;
+    content: '';
+    vertical-align: top;
+    vertical-align: 3px;
+    border-radius: 50%;
+    background-color: #c7ccd1;
+}
+
+.set-area{
+    float: right;
+}
+
+
+.sbtn-set {
+    float: left;
+    padding: 0 9px;
+}
+
+
+.ico-list {
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    vertical-align: top;
+    opacity: .7;
+    background-position: -77px -427px;
+}
+
+.ico-tile {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+    background-position: -458px -44px;
+}
+
+.ico-set {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: -1px 0 1px;
+    vertical-align: top;
+    opacity: .7;
+    background-position: 0 -427px;
+}
+
+
+.set-area:after {
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+
+.newscast-group-news{
+    position: relative;
+    height: 260px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #dae1e6;
+}
+
+.btn-prev{
+    position: absolute;
+    z-index: 10;
+    left: -27px;
+    top: 109px;
+}
+
+.btn-next{
+    position: absolute;
+    z-index: 10;
+    right: -13px;
+    top: 109px;
+}
+
+.btn-prev .ico-btn {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    vertical-align: top;
+    background-position: 0 -308px;
+}
+
+.btn-next .ico-btn {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    vertical-align: top;
+    background-position: -49px -308px;
+}
+
+
+
+.page-box{
+    height: 100%;
+    overflow: hidden;
+}
+
+.p-b{
+    width: 750px;
+    float: left;
+    /* display: none; */
+}
+
+
+.frame-area {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.frame-area .line {
+    position: absolute;
+    z-index: 1;
+    background-color: #e4e8eb;
+}
+
+.to-right1,.to-right2, .to-right3 {
+    right: 0;
+    left: 0;
+    height: 1px;
+}
+
+.to-right1 {
+    top: 65px;
+}
+
+.to-right2 {
+    top: 130px;
+}
+
+.to-right3 {
+    top:195px
+}
+
+
+.to-bottom1,.to-bottom2,.to-bottom3,.to-bottom4,.to-bottom5 {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+}
+
+.to-bottom1 {
+    left: 124px;
+}
+
+.to-bottom2 {
+    left: 248px;
+}
+
+.to-bottom3 {
+    left: 372px;
+}
+
+.to-bottom4 {
+    left: 497px;
+}
+
+.to-bottom5 {
+    left: 622px;
+}
+
+.thumb-area:after {
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.thumb-box {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    width: 16.66%;
+    height: 65px;
+}
+
+.thumb{
+    display: block;
+    padding: 23px 0 22px;
+    text-align: center;
+    
+}
+
+
+.thumb-box.thumb-hover .thumb-popup{
+    display: block
+}
+
+.thumb-popup {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    padding: 19px 0 18px;
+    text-align: center;
+    background-color: #f7f9fa;
+}
+
+
+.btn-popup {
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+    padding: 7px 8px 5px;
+    vertical-align: top;
+    text-decoration: none;
+    color: #505050;
+    border: 1px solid #dae1e6;
+    background-color: #fff;
+}
+
+
+.btn-popup+.btn-popup {
+    margin-left: -1px;
+}
+
+
+.btn-popup:hover {
+    position: relative;
+    border-color: #bec8d8;
+}
+
+/*메뉴 오른쪽 관련 css */
 
 
 .box-container-m-right{
@@ -861,15 +1175,266 @@ input[type=checkbox] {
     background-color: #fff
 }
 
+.login {
+    padding: 16px 16px 12px 17px;
+    border: 1px solid #dae1e6;
+    background-color: #f7f9fa;
+}
+
+.login-msg{
+    padding-left: 3px;
+    color: grey;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -.2px;
+}
+
+.link-login{
+    font-size: 13px;
+    font-weight: 700;
+    display: block;
+    margin-top: 11px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #15c654;
+    border-radius: 2px;
+    background-color: #19ce60;
+}
+
+.ico-naver {
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+    background-position: -270px -276px;
+}
+
+.login-subarea{
+    margin: 14px 8px 0 4px;
+}
+.look-box{
+    float: left;
+}
+
+.look-box::before{
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    margin: -1px 1px 1px;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -138px;
+}
+
+.link-look{
+    color: #404040;
+}
+
+.link-look+.link-look:before {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 5px 0 2px;
+    content: '';
+    vertical-align: top;
+    vertical-align: 3px;
+    border-radius: 50%;
+    background-color: #d7dce0;
+}
+
+.link-join {
+    float: right;
+    color: #505050;
+}
+
+.link-join::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -207px;
+}
+
+
+.timesquare{
+    position: relative;
+    height: 47px;
+    margin: 12px 0;
+    letter-spacing: -.25px;
+    border: 1px solid #dae1e6;
+}
+
+.card-wrap {
+    overflow: hidden;
+    height: 47px;
+    padding-right: 67px;
+}
+
+.card-nav {
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    overflow: hidden;
+}
+
+.btn-nav{
+    float: left;
+    border: 1px solid #e4e8eb;
+    background-color: #fff;
+}
+
+.btn-nav:hover {
+    background-color: #fafbfc;
+}
+
+.btn-nav+.btn-nav {
+    margin-left: -1px;
+}
+
+.btn-card-prev::before{
+
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 7px 8px 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -265px -218px;
+}
+.btn-card-prev:hover::before{
+    background-position: -265px -246px;
+}
+
+.btn-card-next:before {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 7px 8px 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -417px -147px
+}
+
+.btn-card-next:hover:before {
+  background-position: -265px -232px;
+}
+
+.card-rolling{
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    height: 47px;
+}
+.card-rolling>div{
+    width: 281px;
+    position: absolute;
+    left: 0px;
+}
+
+.card-news {
+    display: block;
+    overflow: hidden;
+    padding: 14px 0 13px 16px;
+    background-color: white;
+}
+
+.news-badge {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+    float: left;
+    height: 18px;
+    margin-right: 8px;
+    padding: 0 7px;
+    vertical-align: top;
+    font-style: normal;
+    border: 1px solid #202020;
+    border-radius: 10px;
+}
+
+.news {
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #404040;
+}
+
+.card-weather{
+    font-size: 13px;
+    line-height: 29px;
+    display: block;
+    overflow: hidden;
+    padding: 9px 0 9px 16px;
+}
+
+.card-weather:before {
+    float: left;
+    margin-right: 9px;
+    content: '';
+}
+/*위에거의 으미 */
+
+.ico-w09::before {
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    vertical-align: top;
+    background-position: -68px -68px;
+}
+
+.current-box {    float: left;}
+.current {
+    font-size: 15px;
+    vertical-align: top;
+}
+.state {    margin-left: 5px;}
+.degree-box {
+    float: left;
+    margin-left: 9px;
+}
+.card-weather .min {    color: #2586ee;}
+.card-weather .max {    color: #e9564a;}
+
+.location {
+    font-size: 12px;
+    display: block;
+    overflow: hidden;
+    padding-left: 9px;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: grey;
+}
+
+/*푸터 관련 css*/
 .box-container-footer{
     border-top:1px solid #e4e8eb;
     height: 425px;
     background-color: #fafbfc;
-    
 }
+
+
 
 /*배경 이미지 클래스 */
 
+
+.btn-card-prev::before,
+.btn-card-next:before,
+.btn-card-next:hover:before ,
+.link-join::before,
+.look-box::before,
+.ico-list, .ico-tile, .ico-set,
+.link-newsstand::before,
+.link-newsstand::after,
 .link-media:after,
 .btn-reset:before,
 .btn-set:before,
@@ -881,16 +1446,25 @@ input[type=checkbox] {
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
     background-repeat: no-repeat;
     background-size: 471px 442px;
-
 }
+
+.ico-w09::before{
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_weather_time.284fc7.png);
+    background-repeat: no-repeat;
+    background-size: 199px 165px;
+}
+
 .display-none{
     display: none !important;
 }
-.display-block{
-    display: block !important;
+
+
+.login-subarea:after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
 }
-
-
 /* float 는 block에서 많이 쓰이고 사용하면 부모의 높이가 안잡힘, 이걸 해결하기 위해서 float를 자식으로 가진 부모 쪽에 after~ 위 코드를 넣어주면 
 body::after{
     clear: both;

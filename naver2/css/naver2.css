@@ -53,6 +53,7 @@ body{
 }
 .text-underline{
     text-decoration: underline;
+    color: white;
 }
 .btn-down-whale{
     display: block;
@@ -614,13 +615,17 @@ body{
     height: 2685px;
 }
 
+
+/*컨텐츠 왼쪽 관련 CSS */
 .box-left{
     width: 750px;
     float: left;
-    background-color: yellow;
     height: 1000px;
     padding: 20px 0px;
 }
+
+
+/*왼쪽 첫번째 컨텐츠 */
 
 .box-left1{
     height: 135px;
@@ -629,6 +634,8 @@ body{
 .box-left1>a{
     display: block;
 }
+
+/*왼쪽 두번째 컨텐츠 */
 
 .box-left2{
     padding: 12px 15px 11px 15px;
@@ -714,6 +721,258 @@ body{
     height: 1000px;
     padding: 20px 0px;
 }
+
+
+/*왼쪽 세번째 컨텐츠  */
+
+.box-group-title{
+    padding: 22px 0 16px;
+    line-height: 18px;
+    /*= 높이를 18로 준것과 비슷한 효과*/
+    font-size: 14px;
+}
+
+.box-group-contents{
+    height: 262px;
+    border: 1px solid #dae1e6;
+    border-width: 1px 0;
+    box-sizing: border-box;
+    position: relative;
+    background-color: #fff;
+}
+
+.link-newstand{
+    float: left;
+    font-weight: 700;
+    color: #000;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.link-newstand::before{
+    display: inline-block;
+    width : 27px;
+    height: 24px;
+    margin: -6px 1px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -293px -357px;
+}
+
+.link-newstand::after{
+    display: inline-block;
+    width: 7px;
+    height: 11px;
+    margin-left: 6px;
+    content: '';
+    vertical-align: -1px;
+    background-position: -417px -58px;
+}
+
+.btn-sort{
+    font-size: 14px;
+    line-height: 18px;
+    color: #505050;
+    float: left;
+    margin-left: 10px;
+    letter-spacing: -.2px;
+
+}
+
+.btn-sort-all{
+    font-size: 14px;
+    font-weight: 700px;
+    line-height: 18px;
+    color: #000;
+    float: left;
+}
+
+.btn-sort-all::before{
+   display: inline-block;
+   width: 4px;
+   height: 4px;
+   margin: 0 8px 0 8px;
+   content: '';
+   vertical-align: 3px;
+   border-radius: 50%;
+   background-color: #c7ccd1;
+}
+
+.btn-set{
+    float: left;
+    padding: 0 9px;
+    line-height: 18px;
+}
+
+.icon-list{
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    vertical-align: top;
+    opacity: 0.7;
+    background-position: -77px -427px;
+}
+
+.icon-title.hover,.icon-set.hover,.icon-list.hover{
+    opacity: 1;
+}
+
+
+.icon-list.set{
+    opacity: 1;
+    background-position: -96px -427px;
+}
+
+
+
+.icon-title{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    vertical-align: top;
+    opacity: 0.7;
+    background-position: -458px -62px;
+}
+.icon-title.set{
+    background-position: -458px -44px;
+    opacity: 1;
+}
+
+.icon-set{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: - 1px 0 1px;
+    opacity: 0.7;
+    vertical-align: top;
+    background-position: 0px -427px;
+}
+
+
+.box-row{
+    display: flex;
+}
+
+.box-thumb-area{
+    height: 65px;
+    width: 100%;
+    padding: 23px 0 22px;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.line-row1,.line-row2,.line-row3,
+.line-col1,.line-col2,.line-col3,.line-col4,.line-col5,.line-col6,.line-col7 {
+    position: absolute;
+    z-index: 1;
+    background-color: #e4e8eb;
+}
+
+.line-row1,.line-row2,.line-row3{
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+/*높이는 있어야*/
+
+
+.line-row1{    top:65px;}
+.line-row2{    top:130px;}
+.line-row3{    top:195px;}
+
+
+.line-col1,.line-col2,.line-col3,.line-col4,.line-col5,.line-col6,.line-col7{
+    top:0;
+    bottom: 0;
+    width: 1px;
+}
+
+.line-col2{    left:125px;}
+.line-col3{    left:250px;}
+.line-col4{    left:375px;}
+.line-col5{    left:500px;}
+.line-col6{    left:625px;}
+.line-col7{    left:750px;}
+.box-thumb{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left : 0;
+    right: 0;
+    background-color: #f7f9fa;
+    padding : 19px 0 18px;
+    font-size: 0;
+    /*btn-subs, btn-view 사이의 엔터에 의한 공백을 폰트 사이즈 0으로 처리함으로써 붙는 것 처럼 보여줌 */
+}
+
+.btn-subs,.btn-view{
+    font-size: 12px;
+    line-height: 16px;
+    display: inline-block;
+    padding: 7px 8px 5px;
+    vertical-align: top;
+    color: #505050;
+    border : 1px solid #dae1e6;
+    background-color: #fff;
+
+}
+
+.btn-subs{
+    border-right: none;
+}
+
+.btn-subs.active, .btn-view.active{
+    border-color: #bec8d8;
+}
+
+.btn-view.disable{
+    border-left-color: #bec8d8;
+}
+
+.btn-news-prev,.btn-news-next{
+    top:109px;
+    position: absolute;
+    z-index: 10;
+    width: 44px;
+}
+
+.btn-news-prev{
+    left:-27px;
+}
+
+.btn-news-next{
+    right: -27px;
+}
+
+/*left right 따로 따로 주어야..! */
+
+.icon-news-prev,.icon-news-next{
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    vertical-align: top;
+    background-position: 0 -308px;
+}
+
+.icon-news-next{
+    background-position: -49px -308px;
+}
+
+.btn-news-prev:hover .icon-news-prev{
+    background-position: -227px -161px;
+}
+
+.btn-news-next:hover .icon-news-next{
+    background-position: -98px -308px;
+}
+
+
+
+
+
+/*푸터 관련 CSS*/
+
 .box-container-footer{
     height: 423px;
     background-color: rgb(250, 251, 252);
@@ -723,6 +982,9 @@ body{
 /* 배경 이미지 클래스 */
 
 
+
+.link-newstand::before,
+.link-newstand::after,
 .link-media::after,
 .btn-service-init::before,
 .btn-menu-set::before,
@@ -740,6 +1002,7 @@ body{
 }
 
 
+.box-group-title::after,
 .box-left2::after,
 .box-container-green::after,
 .box-container-black::after,
@@ -747,4 +1010,18 @@ body{
     clear: both;
     content: '';
     display: block;
+}
+
+/* box-group-title을 after 준 이유 부모의 높이가 없기 때문에 float left float right가 안먹힌ㄷ ㅡ ㅇ ㅏ 
+‘float 된 엘리먼트가 부모 엘리먼트의 높이에 영향을 주지 않는다는 사실
+ float된 자식 엘리먼트의 높이를 부모 엘리먼트에 반영하도록 대응하는 방법이라고 한마디로 설명할 수 있겠습니다. 
+ 부모 떠난 자식을 다시 부모의 품 안으로 돌아오도록 하려면 어떻게 해야 하는지 한번 살펴 보시죠. */
+
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
 }
