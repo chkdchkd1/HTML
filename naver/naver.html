@@ -745,6 +745,49 @@
                   </div>
                 </div>
               </div>
+              <div class="themecast">
+                <div class="theme-head">
+                  <div class="group-title">
+                    <div class="title-area">
+                      <strong class="title">오늘 읽을만한 글</strong>
+                      <span class="dsc">주제별로 분류된 다양한 글 모음</span>
+                    </div>
+                    <div class="info-area">
+                      <span class="info">
+                        <strong class="new">2,185</strong>
+                         개의 글
+                      </span>
+                      <a href="#" class="btn-theme-set">관심주제 설정</a>
+                    </div>
+                  </div>
+                  <div class="theme-menu">
+                    <div class="main-category">
+                      <a href="#" class="btn-main-prev">
+                        <i class="ico-btn bg-44265f"></i>
+                      </a>
+                      <a href="#" class="btn-main-next">
+                        <i class="ico-btn bg-44265f"></i>
+                      </a>
+                      <div class="main-container">
+                        <div class="menu-list"> 
+                          <!-- menu-list : 롤링할거담을상자 ul 여러개 (ul 한개가 한페이지 메뉴) 를 담아서 ㅇㅇ -->
+                          <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="theme-contents"></div>
+              </div>
             </div>
             <div class="box-container-m-right">
               <div class="container-right">
@@ -768,30 +811,48 @@
                       <a href="#" class="btn-nav btn-card-next"></a>
                     </div>
                     <div class="card-rolling">
-                      <div class="roro">
-                        <div>
-                          <a href="#" class="card-news">
-                            <i class="news-badge">이슈</i>
-                            <span class="news">코로나바이러스감염증19 현황</span>
-                          </a>
-                        </div>
-                        <div>
-                          <a href="#" class="card-weather ico-w09">
-                            <div class="current-box">
-                            <strong class="current">20.3°</strong><strong class="state">비</strong>
-                            </div>
-                            <div class="degree-box">
-                            <span class="max">26.0°</span><span class="min">22.0°</span>
-                            </div>
-                            <span class="location">서초동</span>
+                      <div class="rollingbox">
+                          <div class="rolling">
+                            <a href="#" class="card-news">
+                              <i class="news-badge">이슈</i>
+                              <span class="news">코로나바이러스감염증19 현황</span>
                             </a>
-                        </div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
+                          </div>
+                          <div class="rolling">
+                            <a href="#" class="card-weather ico-w09">
+                              <div class="current-box">
+                              <strong class="current">20.3°</strong><strong class="state">비</strong>
+                              </div>
+                              <div class="degree-box">
+                              <span class="max">26.0°</span><span class="min">22.0°</span>
+                              </div>
+                              <span class="location">서초동</span>
+                              </a>
+                          </div>
+                          <div class="rolling">
+                            <div class="card-air">
+                              <ul class="list-air">
+                                <li class="air-item">미세
+                                  <strong class="state s-good">좋음</strong>
+                                </li>
+                                <li class="air-item">초미세
+                                  <strong class="state s-good">좋음</strong>
+                                </li>
+                              </ul>
+                              <span class="location">서초동</span>
+                            </div>
+                          </div>
+                          <div class="rolling">
+                            <a href="#" class="card-stock">
+                              <strong class="stock-title">증시</strong>
+                                <div class="stock-box">
+                                <em class="name">코스피</em>
+                                <strong class="current">2,123.09</strong>
+                                <strong class="rate">38.42 -1.78%</strong>
+                              </div>
+                            </a>
+                          </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -804,13 +865,15 @@
     </div>
 
     <script>
-      $(function(){
+  
+  $(function(){
     setInterval(function(){
-        $('.roro').first().animate({'margin-left':'-281px'},700,function(){
-            $(this).detach().appendTo('.roro').css('margin-top','0px').removeAttr('style');
+        $('.rolling').first().animate({'margin-left':'-281px'},900,function(){
+            $(this).detach().appendTo('.rollingbox').css('margin','0').removeAttr('style');
         });
     },2000)
 })
+  
     </script>
 </body>
 </html>

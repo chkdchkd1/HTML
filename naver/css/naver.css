@@ -762,7 +762,8 @@ input[type=checkbox] {
     content: '';
 }
 
-/* https://takeuu.tistory.com/60 */
+/* https://takeuu.tistory.com/60*/
+/*float속성으로 원하는 곳에 배치를 하면 그 다음에 오는 태그들의 위치가 뭉개지는 경우가 허다한데
 /* float 는 block에서 많이 쓰이고 사용하면 부모의 높이가 안잡힘, 이걸 해결하기 위해서 float를 자식으로 가진 부모 쪽에 after~ 위 코드를 넣어주면  */
 
 .issue-area{
@@ -1057,17 +1058,11 @@ input[type=checkbox] {
     height: 1px;
 }
 
-.to-right1 {
-    top: 65px;
-}
+.to-right1 {    top: 65px;}
 
-.to-right2 {
-    top: 130px;
-}
+.to-right2 {    top: 130px;}
 
-.to-right3 {
-    top:195px
-}
+.to-right3 {    top:195px}
 
 
 .to-bottom1,.to-bottom2,.to-bottom3,.to-bottom4,.to-bottom5 {
@@ -1076,25 +1071,15 @@ input[type=checkbox] {
     width: 1px;
 }
 
-.to-bottom1 {
-    left: 124px;
-}
+.to-bottom1 {    left: 124px;}
 
-.to-bottom2 {
-    left: 248px;
-}
+.to-bottom2 {    left: 248px;}
 
-.to-bottom3 {
-    left: 372px;
-}
+.to-bottom3 {    left: 372px;}
 
-.to-bottom4 {
-    left: 497px;
-}
+.to-bottom4 {    left: 497px;}
 
-.to-bottom5 {
-    left: 622px;
-}
+.to-bottom5 {    left: 622px;}
 
 .thumb-area:after {
     display: table;
@@ -1161,6 +1146,123 @@ input[type=checkbox] {
     position: relative;
     border-color: #bec8d8;
 }
+
+
+
+/*오늘 읽을만한 글 ~ */
+
+.themecast{
+    padding: 35px 0 27px;
+    letter-spacing: -.25px;
+}
+
+.group-title {
+    overflow: hidden;
+    padding-bottom: 17px;
+}
+
+
+.theme-contents{
+    height:2747px ;
+}
+
+.title-area{    float: left;}
+
+.title-area .title {
+    font-size: 14px;
+    color: #000;
+}
+
+.title-area .dsc {
+    margin-left: 8px;
+    color:grey;
+}
+
+.info-area{    float: right;}
+.info-area .info{   color: grey;}
+.info-area .new{   color: black;}
+
+
+.btn-theme-set{
+    position: relative;
+    margin-left: 14px;
+    color: #505050;
+}
+
+.btn-theme-set:hover{
+    text-decoration: underline;
+    /* cursor: pointer; */
+}
+
+.btn-theme-set::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+    content: '';
+    vertical-align: top;
+    vertical-align: -1px;
+    opacity: .7;
+    background-position: -458px -223px;
+}
+
+.btn-theme-set:hover:before{
+    opacity: 1;
+}
+
+.btn-theme-set::after{
+    position: absolute;
+    top: 2px;
+    left: -8px;
+    width: 1px;
+    height: 12px;
+    content: '';
+    background-color: #e4e8eb;
+}
+
+.main-category {
+    position: relative;
+}
+
+.btn-main-prev{
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+    left: -23px;
+}
+
+.btn-main-next{
+    position: absolute;
+    z-index: 10;
+    top: 6px;
+    right: -18px;
+}
+
+.btn-main-prev .ico-btn{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    background-position: -47px -357px;
+}
+
+.btn-main-next .ico-btn{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    background-position: -92px -357px;
+}
+
+.main-container{
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    min-height: 100%;
+    width: 100%;
+    height: 49px;
+}
+
 
 /*메뉴 오른쪽 관련 css */
 
@@ -1260,6 +1362,7 @@ input[type=checkbox] {
     background-position: -458px -207px;
 }
 
+/*카드 뉴스 관련 css */
 
 .timesquare{
     position: relative;
@@ -1330,18 +1433,28 @@ input[type=checkbox] {
     min-height: 100%;
     width: 100%;
     height: 47px;
+    
+   
 }
-.card-rolling>div{
+.rolling{
     width: 281px;
-    position: absolute;
-    left: 0px;
+    /* position: absolute; */
+    /* left: 0px; */
+    height: 47px;
+    float: left;
+}
+
+.rollingbox{
+    width: 850px;
+    height: 47px;
 }
 
 .card-news {
     display: block;
     overflow: hidden;
     padding: 14px 0 13px 16px;
-    background-color: white;
+    z-index: 1;
+    
 }
 
 .news-badge {
@@ -1396,13 +1509,24 @@ input[type=checkbox] {
     font-size: 15px;
     vertical-align: top;
 }
-.state {    margin-left: 5px;}
+
 .degree-box {
     float: left;
     margin-left: 9px;
 }
 .card-weather .min {    color: #2586ee;}
 .card-weather .max {    color: #e9564a;}
+
+.min:before {
+    display: inline-block;
+    width: 5px;
+    height: 11px;
+    margin: 0 3px;
+    content: '';
+    vertical-align: top;
+    vertical-align: -1px;
+    background-position: -417px -131px;
+}
 
 .location {
     font-size: 12px;
@@ -1413,7 +1537,121 @@ input[type=checkbox] {
     white-space: nowrap;
     text-overflow: ellipsis;
     color: grey;
+
 }
+
+
+
+.card-air {
+    line-height: 18px;
+    display: block;
+    overflow: hidden;
+    padding: 14px 0 15px 16px;
+    white-space: nowrap;
+}
+
+.list-air {    float: left;}
+.air-item {    float: left;
+               color: #505050;}
+
+.state {
+    font-size: 13px;
+    margin-left: 8px;
+    color: #202020;
+    margin-left: 5px;}
+
+
+.state.s-good::before {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    background-position: -382px -357px;
+    content: '';
+    margin-right: 3px;
+
+}
+
+.air-item+.air-item:before {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 10px;
+    content: '';
+    vertical-align: -1px;
+    background-color: #e4e8eb;
+}
+
+.card-stock {
+    display: block;
+    overflow: hidden;
+    padding: 15px 0 14px 16px;
+    float: left;
+}
+
+.stock-title {
+    display: block;
+    font-size: 13px;
+    float: left;
+    margin-top: 1px;
+}
+
+.stock-box {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    overflow: hidden;
+    height: 17px;
+}
+
+.stock-box:before {
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 3px 7px 2px 6px;
+    content: '';
+    vertical-align: top;
+    background-color: #e4e8eb;
+}
+
+.name {
+    font-size: 12px;
+    line-height: 17px;
+    color: #505050;
+    font-style: normal;
+}
+
+.rate {
+    font-size: 12px;
+    line-height: 17px;
+    margin-left: 10px;
+    color: #2586ee;
+}
+
+
+.timesquare .card-stock .current, .timesquare .card-stock .name, .timesquare .card-stock .rate{
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.timesquare .card-stock .current {
+    font-size: 13px;
+    line-height: 17px;
+    margin-left: 6px;
+}
+
+
+.rate::before{
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    vertical-align: 1px;
+    background-position: -333px -308px;
+    content: ''; 
+    /* content는 무족건..!  */
+}
+
 
 /*푸터 관련 css*/
 .box-container-footer{
@@ -1426,7 +1664,10 @@ input[type=checkbox] {
 
 /*배경 이미지 클래스 */
 
-
+.btn-theme-set::before,
+.rate::before,
+.state.s-good::before,
+.min:before,
 .btn-card-prev::before,
 .btn-card-next:before,
 .btn-card-next:hover:before ,
@@ -1448,6 +1689,7 @@ input[type=checkbox] {
     background-size: 471px 442px;
 }
 
+
 .ico-w09::before{
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_weather_time.284fc7.png);
     background-repeat: no-repeat;
@@ -1456,6 +1698,12 @@ input[type=checkbox] {
 
 .display-none{
     display: none !important;
+}
+
+.stock-title::after{
+    clear: both;
+    content: '';
+    display: block;
 }
 
 

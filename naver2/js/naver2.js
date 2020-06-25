@@ -175,6 +175,25 @@ $(function(){
 		$(this).siblings.toggleClass('disable')
 	})
 
+	$('.btn-nav-prev').click(function(e){
+		/*.box-card-nav>.card 요소가 애니메이션 중이 아니면 동작하고, 애니메이션 중이면 아무일도 안함*/
+		/*첫 애니메이트가 동작 중인데 또 클릭해서 동작시켜서 겹쳐 보이는걸 방지 ㅇㅇ */ 
+		if(!$('.box-card-nav>.card').is(':animated')){
+		$('.box-card-nav>.card').last().detach().prependTo('.box-card-nav').css('margin-left','-281px');
+		$('.box-card-nav>.card').first().animate({'margin-left':'0'},1000);
+		}
+	})
+
+	$('.btn-nav-next').click(function(e){
+		if(!$('.box-card-nav>.card').is(':animated')){
+		$('.box-card-nav>.card').first().animate({'margin-left':'-281px'},1000,function(){
+			$(this).detach().appendTo('.box-card-nav').removeAttr('style');
+			e.preventDefault();
+		});
+		}
+	})
+
+
 	function initMenu(){
 		$('.box-service-menu.display').addClass('display-none');
 		$('.box-service-menu.set').addClass('display-none');
