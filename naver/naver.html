@@ -771,15 +771,94 @@
                       <div class="main-container">
                         <div class="menu-list"> 
                           <!-- menu-list : 롤링할거담을상자 ul 여러개 (ul 한개가 한페이지 메뉴) 를 담아서 ㅇㅇ -->
-                          <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                          <ul class="list-category"> 
+                            <li class="category-item id">
+                              <a href="#" class="tab id-enter">엔터</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-sports">스포츠</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-cargame">자동차</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-bboom">웹툰</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-finance">경제M</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-food">푸드</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-gameapp">게임</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-movie">영화</a>
+                            </li>
+                          </ul>
+                          <ul class="list-category"> 
+                            <li class="category-item">
+                              <a href="#" class="tab id-job">JOB&</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-tech">테크</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-travel">여행+</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-science">과학</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-living">리빙</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-health">건강</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-business">비즈니스</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-wedding">연애·결혼</a>
+                            </li>
+                          </ul>
+                          <ul class="list-category"> 
+                            <li class="category-item">
+                              <a href="#" class="tab id-book">책문화</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-paren">부모i</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-law">법률</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-beauty">패션뷰티</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-animal">동물공감</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-design">디자인</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-china">중국</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-farm">FARM</a>
+                            </li>
+                          </ul>
+                          <ul class="list-category"> 
+                            <li class="category-item">
+                              <a href="#" class="tab id-show">공연전시</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-with">함께N</a>
+                            </li>
+                            <li class="category-item">
+                              <a href="#" class="tab id-school">스쿨잼</a>
+                            </li>
                           </ul>
                         </div>
                       </div>
@@ -872,6 +951,112 @@
             $(this).detach().appendTo('.rollingbox').css('margin','0').removeAttr('style');
         });
     },2000)
+
+
+
+  //클릭할 때 메뉴 속성 변경 되는것 
+  $('.category-item').click(function(e){
+		e.preventDefault();
+		$('.category-item').removeClass('id');
+    $(this).addClass('id');
+
+    themeBtnView();
+    })
+
+
+    // 페이지 버튼을 눌렀을 때 이전 다음으로 메뉴 넘어가는 거 
+    $('.btn-main-next').click(function(e){
+      e.preventDefault();
+      if($('.tab.id-movie').parent().hasClass('id')){
+        $('.list-category').first().animate({'margin-left':'-750px'},1000)
+      }
+      if($('.tab.id-wedding').parent().hasClass('id')){
+      	$('.list-category').eq(1).animate({'margin-left':'-750px'},1000)
+      } 
+      if($('.tab.id-farm').parent().hasClass('id')){
+      	$('.list-category').eq(2).animate({'margin-left':'-750px'},1000)
+      }
+
+      $('.id').removeClass('id').next().addClass('id');
+      themeBtnView();
+  	})
+
+
+    $('.btn-main-prev').click(function(e){
+      e.preventDefault();
+      if($('.tab.id-job').parent().hasClass('id')){
+        $('.list-category').first().animate({'margin-left':'-0px'},1000)
+      }
+      if($('.tab.id-wedding').parent().hasClass('id')){
+      	$('.list-category').eq(1).animate({'margin-left':' 0px'},1000)
+      } 
+      if($('.tab.id-farm').parent().hasClass('id')){
+      	$('.list-category').eq(2).animate({'margin-left':'0px'},1000)
+      }
+
+      $('.id').removeClass('id').prev().addClass('id');
+      themeBtnView();
+  	})
+
+
+
+
+
+
+  
+    themeBtnView();
+    // 위에 것이 있어야 새로고침할 때 자동으로 엔터가 활성화 될 때 버튼이 보이지않는다.
+
+
+	//메뉴 페이지 넘기는 버튼 보이는 경우 or 안보이는 경우 
+	function themeBtnView(){
+		$('.btn-main-prev').removeClass('display-none')
+		$('.btn-main-next').removeClass('display-none')
+		if($('.category-item').first().hasClass('id')){
+			$('.btn-main-prev').addClass('display-none');
+		}
+		if($('.category-item').last().hasClass('id')){
+			$('.btn-main-next').addClass('display-none');
+		}
+  } 
+  
+
+    // 메뉴 클릭시 속성 활성화 (self)
+    // $('.category-item').click(function(){
+    //   $(this).siblings('li').removeClass('id');
+    //----------굳이 이렇게 형제라고 지칭해줄 필요 없다 그냥 id를 가지는 건  category-item 이기에 그냥 category-item 이면 되는것 ㅇㅇ 
+    //   $(this).addClass('id');
+    // })
+
+
+    // 메뉴 페이지 버튼 활성화(self)
+    // $('.tab.id-sports').click(function(){
+    //   $('.btn-main-prev').removeClass('display-none');
+    // })
+    // $('.tab.id-enter').click(function(){
+    //   $('.btn-main-prev').addClass('display-none');
+    // })
+    //----- 이렇게 특정 클래스를 지정해주면 활용도가 떨어짐 일일이 지정해주어야함 ㅇㅇ ..  
+    // 그냥 안보여야 하는경우만 if로 걸어주고 다른경우에는 항상 보여주는걸로 
+
+
+    // $('.btn-main-next').click(function(e){
+    //   e.preventDefault();
+    //   $('.btn-main-prev').removeClass('display-none');
+    //     if($('.tab.id-movie').parent().hasClass('id')){
+    //       $('.list-category').first().animate({'margin-left':'-750px'},1000,function(){
+    //         $(this).detach().appendTo('.menu-list').removeAttr('style');
+    //       });
+    //     } else
+    //       $('.id').removeClass('id').next().addClass('id');
+    // })
+
+    // $('.btn-main-prev').click(function(){
+    //   $('.id').removeClass('id').prev().addClass('id');
+    // })
+
+
+
 })
   
     </script>

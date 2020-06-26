@@ -967,6 +967,178 @@ body{
     background-position: -98px -308px;
 }
 
+
+
+/*왼쪽 네번째 컨텐츠 */
+
+.box-left4{
+    padding: 35px 0 27px;
+}
+
+/* 부모에 폰트 사이즈 0으로 넣으면 엔터에의한 공백을 없앨 수 있다. 단 자식들에게 폰트사이즈를 상속하기때문에 자식들에게 꼭 별도로 폰트사이즈를 지정해주어야 */
+.area-title{
+    font-size: 0;
+    float: left;
+}
+
+.box-theme-title{
+    height:17px;
+    padding-bottom: 17px;
+}
+.area-title .title{
+    font-size: 14px;
+    color: #000;
+    line-height: 16px;
+}
+
+.area-title .dsc{
+    margin-left: 8px;
+    color: grey;
+    font-size: 12px;
+    line-height: 16px;
+}
+.area-info{
+    float: right;
+}
+
+.area-info .info{
+    color: gray;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.area-info .info strong{
+    color: #000;
+}
+
+.area-info .btn-setting{
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+    margin-left: 14px;
+    color: #505050;
+}
+
+.area-info .btn-setting::before{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right: 4px;
+    content: '';
+    vertical-align: -1px;
+    opacity: 0.7;
+    background-position: -458px -223px;
+}
+
+.area-info .btn-setting:hover{
+    text-decoration: underline;
+}
+
+.area-info .btn-setting:hover::before{
+    opacity: 1;
+}
+
+.area-info .btn-setting::after{
+    position: absolute;
+    top : 2px;
+    left: -8px;
+    width: 1px;
+    height: 12px;
+    content: '';
+    background-color: #e4e8eb;
+}
+
+.box-theme-wrap{
+    height: 49px;
+    width: 100%;
+    position: relative;
+}
+
+
+.box-theme-container{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*overflow: hidden > 같은 형제들한테는 통하지는 않는다 */
+
+
+.box-theme-wrap .list-category::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #dae1e6;
+    content: '';
+}
+
+.box-theme-wrap .list-category{
+    background-color: #fff;
+    height: 100%;
+    width: 400%;
+}
+
+.box-theme-wrap .list-category .category-item{
+    width: 94px;
+    height: 100%;
+    float: left;
+    z-index: 1;
+    position: relative;
+}
+/*위에서 z-index , position relative를 주는 이유는 list-category::before를 통해서 테두리를 만들었기 때문에 
+category-item을 클릭하고싶어도 before가 클릭 되기때문에 이를 막기위하여 설정해준다.*/
+
+.box-theme-wrap .list-category .category-item:first-child,
+.box-theme-wrap .list-category .category-item:nth-child(9),
+.box-theme-wrap .list-category .category-item:nth-child(17),
+.box-theme-wrap .list-category .category-item:nth-child(25){
+    width: 92px;
+}
+
+.box-theme-wrap .list-category .category-item .btn-tab{
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 49px;
+    text-align: center;
+    color: #202020;
+    border-right: 1px solid #dae1e6;
+}
+
+.box-theme-wrap .list-category .category-item .btn-tab[aria-selected=true]{
+    position: relative;
+    margin: 0 -1px;
+    border-radius: 1px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+    background-color: #1a2f63;
+    color: #fff;
+}
+
+
+.box-theme-wrap .btn-prev{
+    top:6px;
+    left:-23px;
+    position : absolute;
+    z-index: 10;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: -47px -357px;
+}
+
+.box-theme-wrap .btn-next{
+    top:6px;
+    right: -23px;
+    position : absolute;
+    z-index: 10;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: -92px -357px;
+}
+
 /*오른쪽 첫번째 컨텐츠*/
 .box-right1{
     width: 100%;
@@ -1242,6 +1414,8 @@ body{
 /* 배경 이미지 클래스 */
 
 
+
+.area-info .btn-setting::before,
 .btn-nav-prev:before,
 .btn-nav-next:before,
 .text-degree-min::before,
@@ -1272,6 +1446,7 @@ body{
     background-size: 199px 165px;
 }
 
+.box-theme-title::after,
 .box-sub-area::after,
 .box-group-title::after,
 .box-left2::after,
@@ -1288,6 +1463,7 @@ body{
  float된 자식 엘리먼트의 높이를 부모 엘리먼트에 반영하도록 대응하는 방법이라고 한마디로 설명할 수 있겠습니다. 
  부모 떠난 자식을 다시 부모의 품 안으로 돌아오도록 하려면 어떻게 해야 하는지 한번 살펴 보시죠. */
  /**float속성으로 원하는 곳에 배치를 하면 그 다음에 오는 태그들의 위치가 뭉개지는 경우가 허다한데~*/
+ /* =>즉 부모의 높이 자식의 높이랑 일치시켜주는 것 */
 
 
 .float-left{

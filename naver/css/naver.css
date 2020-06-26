@@ -1263,6 +1263,109 @@ input[type=checkbox] {
     height: 49px;
 }
 
+.menu-list{
+    width: 3000px;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.list-category{
+    position: relative;
+    background-color: #fff;
+    float: left;
+}
+
+.list-category:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border: 1px solid #dae1e6;
+}
+
+.list-category:after {
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.category-item {
+    position: relative;
+    z-index: 1;
+    float: left;
+    width: 94px;
+}
+
+.category-item:first-child {
+    width: 92px;
+}
+
+.main-category .tab {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 49px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid #dae1e6;
+}
+
+.category-item.id .tab {
+    position: relative;
+    margin: 0 -1px;
+    border-radius: 1px;
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,.16);
+}
+
+.tab.id-enter:hover {    color: #e65da0;}
+.tab.id-sports:hover {    color: #0147b5;}
+
+
+.category-item.id .tab.id-enter{
+    color: #fff;
+    background-color: #e65da0;
+}
+
+.category-item.id .tab.id-sports{
+    color: #fff;
+    background-color: #0147b5;
+}
+
+.category-item.id .tab.id-cargame {
+    color: #fff;
+    background-color: #4a94e1;
+}
+
+.category-item.id .tab.id-bboom {
+    color: #fff;
+    background-color: #66c971;
+}
+
+.category-item.id .tab.id-finance{
+    color: #fff;
+    background-color: #35ae5e;
+}
+
+.category-item.id .tab.id-food {
+    color: #fff;
+    background-color: #e77c43;
+}
+
+.category-item.id .tab.id-gameapp {
+    color: #fff;
+    background-color: #5bb8e1;
+}
+
+.category-item.id .tab.id-movie {
+    color: #fff;
+    background-color: #1a2f63;
+}
+
 
 /*메뉴 오른쪽 관련 css */
 
