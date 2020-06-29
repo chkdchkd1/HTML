@@ -620,7 +620,6 @@ body{
 .box-left{
     width: 750px;
     float: left;
-    height: 1000px;
     padding: 20px 0px;
 }
 
@@ -717,8 +716,6 @@ body{
 .box-right{
     width:350px;
     float: right;
-    background-color: green;
-    height: 1000px;
     padding: 20px 0px;
 }
 
@@ -1403,12 +1400,115 @@ category-item을 클릭하고싶어도 before가 클릭 되기때문에 이를 �
     background-position: -417px -147px;
 }
 
+
+/*오른쪽 세번째 컨텐츠 css*/
+.box-right3>a{
+    display: block;
+}
+.box-right3>a>img{
+    width : 350px; 
+    height : 200px;
+    box-sizing: border-box;
+    border: 1px solid #e7ecf0;
+    float: left;
+}
+
+/*오른쪽 네번째 컨텐츠 css*/
+.box-right4{
+    margin-top: 15px;
+    height: 1191px;
+}
+
+.box-shop-header{
+    line-height: 17px;
+    padding: 12px 0 13px ;
+}
+
+
+.text-shop{
+    float: left;
+    line-height: 17px;
+    font-size: 14px;
+    font-weight: bold;
+    margin: -1px 0 3px;
+    color: #000;
+}
+
+.shop-tab{
+    float: right;
+}
+
+.shop-tab .tab{
+    display: block;
+    padding: 0 1px ;
+    color: #202020;
+    border-bottom: 2px solid transparent;
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: bold;
+}
+
+.shop-tab .tab[aria-selected=true]{
+    color: #03c75a;
+    border-color: #19ce60;
+}
+
+.shop-tab .tab-item{
+    float: left;
+    margin-left: 15px;
+}
+/*ul 밑 기본은 li태그는 기본 display  block이라 다음줄로 옴 그래서 float left 해주어야  */
+
+
+.shop-tab .tab-item:first-child{
+    margin-left: 0;
+}
+
+
+.box-shop-middle{
+    padding: 12px 9px 11px 17px;
+    border: 1px solid #e4e8eb;
+    background-color: #f7f9fa;
+    border-bottom: none;
+}
+
+.box-shop-middle>.box-mall>.link-mall{
+    float: left;
+    line-height: 23px;
+    color: #404040;
+    font-size: 12px;
+}
+
+.box-shop-middle>.box-mall>.link-mall.random{
+    font-weight: bold;
+}
+
+.box-shop-middle>.box-mall>.comma{
+    display: block;
+    float: left;
+    width: 3px;
+    height: 3px;
+    vertical-align: top;
+    border-radius: 50%;
+    background-color : #c9cccf;
+    margin: 10px 9px 0;
+}
+
+.box-shop-middle>.box-mall:nth-child(2)>.comma{
+    margin: 10px 5px 0;;
+}
+
+.box-shop-body{
+    border: 1px solid #e4e8eb;
+}
+
 /*푸터 관련 CSS*/
 
 .box-container-footer{
     height: 423px;
     background-color: rgb(250, 251, 252);
 }
+
 
 
 /* 배경 이미지 클래스 */
@@ -1446,6 +1546,11 @@ category-item을 클릭하고싶어도 before가 클릭 되기때문에 이를 �
     background-size: 199px 165px;
 }
 
+
+
+.box-shop-header::after,
+.box-shop-middle>.box-mall::after,
+.box-right3>a::after,
 .box-theme-title::after,
 .box-sub-area::after,
 .box-group-title::after,

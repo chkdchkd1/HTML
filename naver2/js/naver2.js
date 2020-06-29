@@ -276,4 +276,54 @@ $(function(){
 		$('.icon-check').removeClass('checked');
 
 	}
+
+	$('.box-shop-header .tab').click(function(e){
+		e.preventDefault();
+		$('.box-shop-header .tab').attr('aria-selected','false');
+		$(this).attr('aria-selected','true');
+		shopView();
+		tabRamdom();
+		var target = $(this).attr('data-target');
+		if(target == 'mall'){
+			$('.box-shop-middle').addClass('display-none');
+		} else {
+			$('.box-shop-middle').removeClass('display-none');
+		}
+	})
+
+
+
+	/*오른쪽 3번째 컨텐츠에서 상품/쇼핑몰/MEN이 선택되면 선택된 내용에 맞는 body가 보이도록 하는 함수  */
+	function shopView(){
+		var target = $('.box-shop-header .tab[aria-selected=true]').attr('data-target');
+		$('.box-shop-body>div').addClass('display-none');
+		$('.box-shop-body>.'+target).removeClass('display-none');
+	}
+
+	shopView();
+	tabRamdom();
+
+	function tabRamdom(){
+		var arr = [];
+		$('.box-shop-middle>.box-mall>.link-mall').removeClass('random');
+		for( ; arr.length < 4; ){
+			var r = getRnadom(1,12);
+			if(arr.indexOf(r) >= 0){
+				continue;
+			}
+			arr.push(r)
+			if ( r <= 6 ){
+				$('.box-shop-middle>.box-mall').eq(0).find('.link-mall').eq(r-1).addClass('random');
+			}else {
+			$('.box-shop-middle>.box-mall').eq(1).find('.link-mall').eq(r-7).addClass('random');
+		}
+		}
+	}
+	
+	function getRnadom(min, max){
+		return Math.floor(Math.random()*(max-min+1 + min))
+	}
+
+	//indexOf() 메서드는 배열에서 지정된 요소를 찾을 수 있는 첫 번째 인덱스를 반환하고 존재하지 않으면 -1을 반환합니다
+
 })
