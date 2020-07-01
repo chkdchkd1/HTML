@@ -16,7 +16,9 @@
             border: 1px solid black;
         }
         .absolute{
-            /* position absolute는 본인과 가장 가까운 조상중에서 position이 relative인 조상을 기준으로 한다. 없으면 브라우저 화면을 기준으로(html 태그를 기준) */
+            /* position absolute는 본인과 가장 가까운 조상중에서 position이 relative인 조상을 기준으로 한다.
+            == 부모요소가 relative든  absolute든 실제로는 아무 부모의 요소로부터 거리를 산출해 낸다.
+             없으면 브라우저 화면을 기준으로(html 태그를 기준) */
             /* top은 위에서 아래로 박스가 배치되도록, bottom은 아래에서 위로 박스가 배치되도록, right은 오른쪽에서 왼쪽으로 박스가 배치되도록
                 부호가 -면 반대 방향*/
             position: absolute;
